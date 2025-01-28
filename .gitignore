@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.env
+
+# Node/React
+node_modules/
+dist/
+.DS_Store
+*.local
+
+# Project specific
+*.xlsx
+*.sql
