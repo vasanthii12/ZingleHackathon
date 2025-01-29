@@ -50,10 +50,11 @@ By following these steps, you'll be up and running the application locally!
 2. **Backend Setup**
 
 **Install dependencies (e.g., Flask or other Python packages):**
+   ```bash
   pip install -r requirements.txt
 
-**Start the backend server:**
-
+ Start the backend server:
+  ```bash
   python app.py  
   - Make sure the frontend (React app) and backend are running on their respective ports. Update the API URLs in the frontend to match the backend server URLs.
 -  you can use the auto-generated API documentation, which is available at http://localhost:8000/docs. This is powered by Swagger UI and provides an interactive way to explore and test your API endpoints.
@@ -65,7 +66,7 @@ npm install
 **Run the development server:**
 npm run dev
 - By default, Vite will run your app on http://localhost:5173.
-- 
+
 ### Usage
 
 **Upload SQL Files:**
