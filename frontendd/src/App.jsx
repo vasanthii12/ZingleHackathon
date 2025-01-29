@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Box, Container, Button, Typography, CircularProgress, Paper, Snackbar, Alert } from '@mui/material';
 import ReactFlow, { Controls, Background } from 'reactflow';
 import 'reactflow/dist/style.css';
+import "./App.css";
 import axios from 'axios';
 
 function App() {
@@ -193,15 +194,20 @@ function App() {
         )}
       </Box>
 
-      <Snackbar 
-        open={notification.open} 
-        autoHideDuration={6000} 
-        onClose={() => setNotification({ ...notification, open: false })}
-      >
-        <Alert severity={notification.type} sx={{ width: '100%' }}>
-          {notification.message}
-        </Alert>
-      </Snackbar>
+      <Box sx={{ position: 'relative', width: '100%' }}>
+  <Snackbar 
+    open={notification.open} 
+    autoHideDuration={6000} 
+    onClose={() => setNotification({ ...notification, open: false })}
+    anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+    sx={{ position: 'absolute', bottom: '-100px' }} 
+  >
+    <Alert severity={notification.type} sx={{ width: '100%' }}>
+      {notification.message}
+    </Alert>
+  </Snackbar>
+</Box>
+
     </Container>
   );
 }
